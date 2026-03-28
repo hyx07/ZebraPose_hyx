@@ -27,8 +27,11 @@
 torchrun --standalone --nproc_per_node=gpu/2/4 train_single.py/train_double.py
 ```
 - 其中：
+
     gpu/2/4: 指使用所有可用GPU或2/4个GPU。
+
     train_single.py: 仅使用一个数据集做训练，对于网上的公开数据集，一般会叫train_pbr，指渲染出来的数据集。
+    
     train_double.py: 使用两个数据集做训练，对于网上的公开数据集，一般是train_real和train_pbr，分别指真实拍摄和标注的数据集和渲染出来的数据集。
 - 对于新的数据集，需要编辑tools_for_BOP/common_dataset_info.py
 - 建议可以先用网上的公开数据集做训练，确定性能等满足预期后再自己制作数据集。
